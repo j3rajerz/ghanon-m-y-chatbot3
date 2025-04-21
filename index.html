@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>app.ghanon</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ghanon.m.y - چت بات حقوقی (نسخه 3)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- صفحه ورود -->
+    <div id="login-page" class="auth-container">
+        <div class="login-box">
+            <h1>ورود به سیستم ghanon.m.y</h1>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">نام کاربری:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">رمز عبور:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">ورود</button>
+                <div id="login-error" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- صفحه اصلی چت -->
+    <div id="chat-page" class="chat-container" style="display:none;">
+        <header>
+            <div class="user-menu">
+                <span id="username-display"></span>
+                <div class="dropdown">
+                    <button class="dropbtn">☰</button>
+                    <div class="dropdown-content">
+                        <a href="#" id="change-pass-btn">تغییر رمز عبور</a>
+                        <a href="#" id="logout-btn">خروج از سیستم</a>
+                    </div>
+                </div>
+            </div>
+            <h1>ghanon.m.y v3</h1>
+            <p>چت بات تخصصی پاسخگویی به سوالات حقوقی</p>
+        </header>
+        
+        <div id="loading-indicator">
+            <div class="spinner"></div>
+            <p id="loading-message">در حال بارگذاری منابع از ghanon-m-y-chatbot3...</p>
+        </div>
+        
+        <div id="chat-box"></div>
+        
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="سوال حقوقی خود را بپرسید..." disabled>
+            <button id="send-btn" disabled>ارسال</button>
+        </div>
+        
+        <footer>
+            <p>تمامی پاسخ‌ها از تحلیل فایل PDF در ریپازیتوری ghanon-m-y-chatbot3 استخراج می‌شوند</p>
+        </footer>
+    </div>
+
+    <!-- مودال تغییر رمز عبور -->
+    <div id="change-pass-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>تغییر رمز عبور</h2>
+            <form id="change-pass-form">
+                <div class="input-group">
+                    <label for="current-pass">رمز فعلی:</label>
+                    <input type="password" id="current-pass" required>
+                </div>
+                <div class="input-group">
+                    <label for="new-pass">رمز جدید:</label>
+                    <input type="password" id="new-pass" required minlength="4">
+                </div>
+                <div class="input-group">
+                    <label for="confirm-pass">تکرار رمز جدید:</label>
+                    <input type="password" id="confirm-pass" required minlength="4">
+                </div>
+                <div id="pass-error" class="error-message"></div>
+                <button type="submit">تغییر رمز</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
