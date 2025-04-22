@@ -1,23 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>app.ghanon</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ghanon.m.y - چت بات حقوقی (نسخه 3)</title>
+    <title>ghanon.m.y - چت بات حقوقی هوشمند</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- صفحه ورود -->
     <div id="login-page" class="auth-container">
         <div class="login-box">
             <h1>ورود به سیستم ghanon.m.y</h1>
@@ -36,7 +25,6 @@
         </div>
     </div>
 
-    <!-- صفحه اصلی چت -->
     <div id="chat-page" class="chat-container" style="display:none;">
         <header>
             <div class="user-menu">
@@ -49,13 +37,13 @@
                     </div>
                 </div>
             </div>
-            <h1>ghanon.m.y v3</h1>
-            <p>چت بات تخصصی پاسخگویی به سوالات حقوقی</p>
+            <h1>ghanon.m.y</h1>
+            <p>چت بات هوشمند پاسخگویی به سوالات حقوقی</p>
         </header>
         
         <div id="loading-indicator">
             <div class="spinner"></div>
-            <p id="loading-message">در حال بارگذاری منابع از ghanon-m-y-chatbot3...</p>
+            <p id="loading-message">در حال بارگذاری منابع حقوقی...</p>
         </div>
         
         <div id="chat-box"></div>
@@ -66,11 +54,10 @@
         </div>
         
         <footer>
-            <p>تمامی پاسخ‌ها از تحلیل فایل PDF در ریپازیتوری ghanon-m-y-chatbot3 استخراج می‌شوند</p>
+            <p>نسخه هوشمند - تحلیل پاسخ‌ها بر اساس منابع حقوقی</p>
         </footer>
     </div>
 
-    <!-- مودال تغییر رمز عبور -->
     <div id="change-pass-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -94,13 +81,8 @@
         </div>
     </div>
 
-    <!-- PDF.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/compromise@14.0.0/builds/compromise.min.js"></script>
     <script src="script.js"></script>
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
 </body>
 </html>
